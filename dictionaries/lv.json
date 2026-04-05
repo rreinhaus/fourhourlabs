@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "logo": "4hourlabs",
+    "home": "Sākums",
+    "projects": "Gadījumu izpēte",
+    "contact": "Kontakti",
+    "lang_switch": "EN"
+  },
+  "hero": {
+    "headline": "Mēs automatizējam jūsu komandas dārgākās 4 darba stundas dienā.",
+    "subhook": "AI aģenti Baltijas MVU.",
+    "cta": "Sākt projektu",
+    "secondary_cta": "Skatīt gadījumus"
+  },
+  "pricing": {
+    "title": "Cenas",
+    "subtitle": "Divi vienkārši sadarbības modeļi. Nav nepieciešams abonements, lai sāktu.",
+    "setup": {
+      "label": "Iestatīšana",
+      "type": "Vienreizējs maksājums",
+      "range": "€100 – €1 000",
+      "description": "Fiksēta apjoma automatizācija, kas tiek uzbūvēta, testēta un nodota. Ideāli piemērota vienam procesam ar skaidriem ievades un izvades datiem.",
+      "includes": [
+        "Prasību darbnīca",
+        "Agenta izstrāde un integrācija",
+        "Dokumentācija un nodošana",
+        "30 dienu atbalsta logs"
+      ]
+    },
+    "retainer": {
+      "label": "Uzturēšanas abonements",
+      "type": "Ikmēneša",
+      "range": "€200 – €1 000 / mēn.",
+      "description": "Pastāvīga jūsu automatizācijas sistēmas uzraudzība, uzlabošana un paplašināšana, attīstoties jūsu procesiem.",
+      "includes": [
+        "Ikmēneša pārskata zvans",
+        "Kļūdu labošana un uzvednes precizēšana",
+        "Jaunu darbplūsmu pievienošana",
+        "Prioritāra atbildēšana"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Gadījumu Izpēte",
+    "subtitle": "Reālas automatizācijas Baltijas MVU.",
+    "cta": "Lasīt gadījumu izpēti",
+    "items": [
+      {
+        "id": "invoice-automation",
+        "title": "AI Rēķinu Automatizācija",
+        "description": "85% rēķinu apstrādāti bez cilvēka iesaistes — no 3 stundām ikdienas datu ievades līdz 9 minūtēm izņēmumu pārskatīšanai.",
+        "tags": ["Dokumentu AI", "Grāmatvedība", "PDF apstrāde"]
+      },
+      {
+        "id": "crm-lead-enrichment",
+        "title": "CRM Vadītāju Bagātināšana",
+        "description": "Pārdošanas izpētes laiks samazināts no 40 minūtēm līdz 3 minūtēm vienam vadītājam — nemainot CRM vai pārdošanas procesu.",
+        "tags": ["CRM", "Tīmekļa ieguve", "Vadītāju novērtēšana"]
+      },
+      {
+        "id": "email-triage-agent",
+        "title": "E-pasta Šķirošanas Agents",
+        "description": "Vidējais pirmās atbildes laiks samazināts no 6 stundām līdz 45 minūtēm. 55% ienākošo e-pastu atrisināti automātiski.",
+        "tags": ["E-pasts", "Klasifikācija", "LLM"]
+      }
+    ]
+  },
+  "case_studies": {
+    "back": "← Atpakaļ uz gadījumu izpēti",
+    "challenge_label": "Problēma",
+    "solution_label": "Risinājums",
+    "results_label": "Rezultāti",
+    "tech_label": "Tehnoloģiju steks",
+    "cta_label": "Vēlaties līdzīgus rezultātus savai komandai?",
+    "cta_button": "Sākt projektu",
+    "items": {
+      "invoice-automation": {
+        "title": "AI Rēķinu Automatizācija",
+        "client": "Kravu ekspedīcijas uzņēmums — 45 darbinieki, Rīga",
+        "tags": ["Dokumentu AI", "Grāmatvedība", "PDF apstrāde"],
+        "headline": "No 3 stundu ikdienas datu ievades līdz 9 minūtēm izņēmumu pārskatīšanai.",
+        "challenge": "Kreditoru komanda manuāli ievadīja 80–120 PDF rēķinus dienā no 60+ piegādātājiem Microsoft Navision. Katrs rēķins aizņēma vidēji 3 minūtes. Ievades kļūdas izraisīja maksājumu kavējumus un sabojāja attiecības ar piegādātājiem. Komanda tērēja aptuveni 15% no kopējās kapacitātes uzdevumam, kas neradīja nekādu biznesa vērtību.",
+        "solution": "Mēs izveidojām AI aģentu, kas visu diennakti uzrauga īpašu kreditoru pastkasti. Kad pienāk jauns rēķins, aģents ekstrahē strukturētus datus, izmantojot vizuālo modeli, salīdzina katru rindu ar atvērto pirkumu pasūtījumu datu bāzi un automātiski ievieto atbilstošos rēķinus Navision. Rēķini, kuriem nevar atrast atbilstošu PO ar augstu ticamību, tiek atzīmēti ikdienas izņēmumu apkopojumā — 9 minūšu uzdevums, nevis 3 stundu.",
+        "results": [
+          { "metric": "85%", "label": "rēķinu apstrādāti bez cilvēka iesaistes" },
+          { "metric": "2,5 st.", "label": "ietaupīti dienā kreditoru komandai" },
+          { "metric": "0,3%", "label": "kļūdu līmenis, no 4%" },
+          { "metric": "3 nedēļas", "label": "no uzsākšanas līdz ražošanai" }
+        ],
+        "tech": ["GPT-4o Vision", "Python", "Microsoft Navision API", "IMAP e-pasta uzraudzība", "PostgreSQL"]
+      },
+      "crm-lead-enrichment": {
+        "title": "CRM Vadītāju Bagātināšana",
+        "client": "B2B SaaS uzņēmums — 12 darbinieki, Tallina",
+        "tags": ["CRM", "Tīmekļa ieguve", "Vadītāju novērtēšana"],
+        "headline": "Pārdošanas izpētes laiks samazināts 13× — nemainot CRM vai pārdošanas procesu.",
+        "challenge": "Katru reizi, kad HubSpot parādījās jauns vadītājs, pārdošanas pārstāvis pavadīja 35–45 minūtes, manuāli pētot uzņēmumu: darbinieku skaitu, finansēšanas posmu, tehnoloģiju steku, LinkedIn lēmumu pieņēmējus un to, vai konts atbilst ideālajam klientu profilam. Ar 15–20 jauniem vadītājiem nedēļā tas patērēja vairāk nekā 10 stundas no vecāko pārdošanas speciālistu laika.",
+        "solution": "Bagātināšanas aģents tiek aktivizēts automātiski, kad HubSpot tiek izveidots jauns kontakts. Tas meklē uzņēmuma vietni, LinkedIn profilu un publiskos datu avotus, pēc tam novērtē vadītāju pret konfigurējamu ICP kritēriju. 4 minūšu laikā pēc vadītāja ienākšanas CRM kontakta ieraksts tiek atjaunināts ar uzņēmuma kopsavilkumu, darbinieku skaita aplēsi, tehnoloģiju signāliem, galvenajiem lēmumu pieņēmēju profiliem un ICP punktiem.",
+        "results": [
+          { "metric": "3 min.", "label": "vidējais izpētes laiks, no 40 min." },
+          { "metric": "13×", "label": "ātrāka vadītāju kvalifikācija" },
+          { "metric": "40%", "label": "cauruļvada caurlaides spējas pieaugums" },
+          { "metric": "10 st.", "label": "vecāko pārdošanas speciālistu laiks atgūts nedēļā" }
+        ],
+        "tech": ["GPT-4o", "Python", "HubSpot API", "LinkedIn meklēšana", "Crunchbase API"]
+      },
+      "email-triage-agent": {
+        "title": "E-pasta Šķirošanas Agents",
+        "client": "E-komercijas mazumtirgotājs — 8 darbinieki, Viļņa",
+        "tags": ["E-pasts", "Klasifikācija", "LLM"],
+        "headline": "Pirmās atbildes laiks no 6 stundām līdz 45 minūtēm. Puse e-pastu atrisina sevi paši.",
+        "challenge": "Divu cilvēku atbalsta komanda apstrādāja 150–200 ienākošos klientu e-pastus dienā. Vidējais pirmās atbildes laiks bija 6 stundas. Pīķa sezonās tas pieauga līdz 24 stundām. Lielākā daļa e-pastu bija atkārtojoši — pasūtījuma statuss, piegādes kavējumi, atgriešanas pieprasījumi.",
+        "solution": "Šķirošanas aģents savienojas ar atbalsta pastkasti un reāllaikā apstrādā katru ienākošo e-pastu. Tas klasificē e-pastu pēc tēmas un steidzamības, pēc tam izmantojot klienta e-pasta adresi no Shopify ielādē attiecīgos pasūtījuma datus. Rutīnas pieprasījumiem tas automātiski ģenerē un nosūta pilnīgu, personalizētu atbildi. Sarežģītos gadījumos tas sagatavo ieteicamo atbildi un novirza pie atbilstošā komandas locekļa.",
+        "results": [
+          { "metric": "45 min.", "label": "vidējā pirmā atbilde, no 6 stundām" },
+          { "metric": "55%", "label": "e-pastu atrisināti automātiski" },
+          { "metric": "3×", "label": "atbalsta apjoms apstrādāts ar to pašu komandu" },
+          { "metric": "4,8 / 5", "label": "klientu apmierinātības rādītājs pēc ieviešanas" }
+        ],
+        "tech": ["GPT-4o", "Python", "Gmail API", "Shopify API", "SendGrid"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Sākt projektu",
+    "subtitle": "Aprakstiet savu sāpīgāko manuālo procesu. Ja to var automatizēt, mēs to izdarīsim.",
+    "name_label": "Vārds Uzvārds",
+    "email_label": "E-pasts",
+    "company_label": "Uzņēmums",
+    "message_label": "Pastāstiet par procesu, kuru vēlaties automatizēt",
+    "submit": "Nosūtīt ziņojumu",
+    "success": "Ziņojums nosūtīts. Sazināsimies 24 stundu laikā.",
+    "error": "Kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz vai rakstiet tieši."
+  },
+  "meta": {
+    "home_title": "4hourlabs — AI Aģenti Baltijas MVU",
+    "home_description": "Mēs automatizējam jūsu komandas dārgākās 4 darba stundas dienā. Fiksētas cenas AI aģentu projekti Baltijas MVU.",
+    "projects_title": "Gadījumu Izpēte — 4hourlabs",
+    "projects_description": "AI automatizācijas gadījumu izpēte: rēķinu apstrāde, CRM bagātināšana un e-pasta šķirošana Baltijas uzņēmumiem.",
+    "contact_title": "Kontakti — 4hourlabs",
+    "contact_description": "Sāciet AI automatizācijas projektu ar 4hourlabs. Fiksētas cenas iestatīšana vai ikmēneša abonements. Baltijā."
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "logo": "4hourlabs",
+    "home": "Home",
+    "projects": "Case Studies",
+    "contact": "Contact",
+    "lang_switch": "LV"
+  },
+  "hero": {
+    "headline": "We automate your team's most expensive 4 hours of the day.",
+    "subhook": "AI agents for Baltic SMEs.",
+    "cta": "Start a project",
+    "secondary_cta": "See case studies"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Two simple engagement models. No retainers required to start.",
+    "setup": {
+      "label": "Setup",
+      "type": "One-time",
+      "range": "€100 – €1,000",
+      "description": "A fixed-scope automation built, tested, and handed over. Ideal for one process with clear inputs and outputs.",
+      "includes": [
+        "Requirements workshop",
+        "Agent build & integration",
+        "Documentation & handover",
+        "30-day support window"
+      ]
+    },
+    "retainer": {
+      "label": "Maintenance Retainer",
+      "type": "Monthly",
+      "range": "€200 – €1,000 / mo",
+      "description": "Ongoing monitoring, iteration, and expansion of your automation stack as your processes evolve.",
+      "includes": [
+        "Monthly review call",
+        "Bug fixes & prompt tuning",
+        "New workflow additions",
+        "Priority response"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Case Studies",
+    "subtitle": "Real automations built for Baltic SMEs.",
+    "cta": "Read case study",
+    "items": [
+      {
+        "id": "invoice-automation",
+        "title": "AI Invoice Automation",
+        "description": "85% of invoices processed without human touch — from 3 hours of daily data entry down to 9 minutes of exception review.",
+        "tags": ["Document AI", "Accounting", "PDF Parsing"]
+      },
+      {
+        "id": "crm-lead-enrichment",
+        "title": "CRM Lead Enrichment",
+        "description": "Sales research time cut from 40 minutes to 3 minutes per lead — without changing the CRM or sales workflow.",
+        "tags": ["CRM", "Web Scraping", "Lead Scoring"]
+      },
+      {
+        "id": "email-triage-agent",
+        "title": "Email Triage Agent",
+        "description": "Average first response time dropped from 6 hours to 45 minutes. 55% of incoming emails resolved automatically.",
+        "tags": ["Email", "Classification", "LLM"]
+      }
+    ]
+  },
+  "case_studies": {
+    "back": "← Back to case studies",
+    "challenge_label": "The Challenge",
+    "solution_label": "The Solution",
+    "results_label": "Results",
+    "tech_label": "Tech Stack",
+    "cta_label": "Want similar results for your team?",
+    "cta_button": "Start a project",
+    "items": {
+      "invoice-automation": {
+        "title": "AI Invoice Automation",
+        "client": "Freight forwarding company — 45 employees, Riga",
+        "tags": ["Document AI", "Accounting", "PDF Parsing"],
+        "headline": "From 3 hours of daily data entry to 9 minutes of exception review.",
+        "challenge": "The accounts payable team was manually keying 80–120 PDF invoices per day from 60+ suppliers into Microsoft Navision. Each invoice took an average of 3 minutes — longer when supplier formatting varied. Keying errors caused payment delays and strained supplier relationships. The team was spending roughly 15% of their total capacity on a task that produced zero business value.",
+        "solution": "We built an AI agent that monitors a dedicated AP inbox around the clock. When a new invoice arrives, the agent extracts structured line items using a vision model, matches each line against the open purchase order database, and auto-posts matched invoices directly into Navision. Invoices that cannot be matched with high confidence are flagged in a daily exception digest for human review — a 9-minute task instead of a 3-hour one.",
+        "results": [
+          { "metric": "85%", "label": "of invoices processed without human touch" },
+          { "metric": "2.5 hrs", "label": "saved per day for the AP team" },
+          { "metric": "0.3%", "label": "error rate, down from 4%" },
+          { "metric": "3 weeks", "label": "from kick-off to production" }
+        ],
+        "tech": ["GPT-4o Vision", "Python", "Microsoft Navision API", "IMAP email monitoring", "PostgreSQL"]
+      },
+      "crm-lead-enrichment": {
+        "title": "CRM Lead Enrichment",
+        "client": "B2B SaaS company — 12 employees, Tallinn",
+        "tags": ["CRM", "Web Scraping", "Lead Scoring"],
+        "headline": "Sales research time cut 13× — without changing the CRM or the sales workflow.",
+        "challenge": "Each time a new lead entered HubSpot, a sales rep spent 35–45 minutes manually researching the company: headcount, funding stage, tech stack, LinkedIn decision-makers, and whether the account fit their ideal customer profile. With 15–20 new leads per week, this was consuming over 10 hours of senior sales time — time that should have been spent on calls.",
+        "solution": "An enrichment agent triggers automatically when a new contact is created in HubSpot. It scrapes the company's website, LinkedIn profile, and public data sources, then scores the lead against a configurable ICP rubric. Within 4 minutes of a lead entering the CRM, the contact record is updated with company summary, headcount estimate, tech stack signals, top decision-maker profiles, ICP score, and a one-paragraph outreach brief written specifically for that account.",
+        "results": [
+          { "metric": "3 min", "label": "average research time, down from 40 min" },
+          { "metric": "13×", "label": "faster lead qualification" },
+          { "metric": "40%", "label": "increase in pipeline throughput" },
+          { "metric": "10 hrs", "label": "of senior sales time recovered per week" }
+        ],
+        "tech": ["GPT-4o", "Python", "HubSpot API", "LinkedIn scraping", "Crunchbase API"]
+      },
+      "email-triage-agent": {
+        "title": "Email Triage Agent",
+        "client": "E-commerce retailer — 8 employees, Vilnius",
+        "tags": ["Email", "Classification", "LLM"],
+        "headline": "First response time from 6 hours to 45 minutes. Half the emails now resolve themselves.",
+        "challenge": "A two-person support team was handling 150–200 inbound customer emails per day. Average first response time was 6 hours. During peak seasons it stretched to 24. The majority of emails were repetitive — order status, shipping delays, return requests — but each still required a human to open the order in Shopify, locate the relevant information, and compose a reply.",
+        "solution": "The triage agent connects to the support inbox and processes every incoming email in real time. It classifies the email by topic (order status, return, complaint, general inquiry) and urgency, then pulls the relevant order data from Shopify using the customer's email address. For routine queries, it generates and sends a complete, personalised reply automatically. For complex or sensitive cases, it drafts a suggested reply and routes to the correct team member with full context pre-loaded — no inbox digging required.",
+        "results": [
+          { "metric": "45 min", "label": "average first response, down from 6 hours" },
+          { "metric": "55%", "label": "of emails resolved automatically" },
+          { "metric": "3×", "label": "support volume handled with same team size" },
+          { "metric": "4.8 / 5", "label": "customer satisfaction score post-launch" }
+        ],
+        "tech": ["GPT-4o", "Python", "Gmail API", "Shopify API", "SendGrid"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Start a Project",
+    "subtitle": "Describe your most painful manual process. If we can automate it, we will.",
+    "name_label": "Full Name",
+    "email_label": "Email",
+    "company_label": "Company",
+    "message_label": "Tell us about the process you want automated",
+    "submit": "Send Message",
+    "success": "Message sent. We'll be in touch within 24 hours.",
+    "error": "Something went wrong. Please try again or email directly."
+  },
+  "meta": {
+    "home_title": "4hourlabs — AI Agents for Baltic SMEs",
+    "home_description": "We automate your team's most expensive 4 hours of the day. Fixed-price AI agent projects for Baltic SMEs.",
+    "projects_title": "Case Studies — 4hourlabs",
+    "projects_description": "AI automation case studies: invoice processing, CRM enrichment, and email triage for Baltic businesses.",
+    "contact_title": "Contact — 4hourlabs",
+    "contact_description": "Start an AI automation project with 4hourlabs. Fixed-price setup or monthly retainer. Based in the Baltics."
+  }
+}
