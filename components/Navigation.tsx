@@ -29,9 +29,9 @@ export function Navigation({ dict, lang }: Props) {
           <Image
             src="/logo.png"
             alt="4hourlabs"
-            width={140}
-            height={40}
-            className="h-8 w-auto"
+            width={420}
+            height={120}
+            className="h-24 w-auto"
             priority
           />
         </Link>
