@@ -2,15 +2,24 @@
 
 import nodemailer from 'nodemailer'
 
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-})
+function createTransporter() {
+  const user = process.env.GMAIL_USER
+  // Strip spaces — Gmail app passwords are 16 chars, spaces are display-only
+  const pass = (process.env.GMAIL_APP_PASSWORD ?? '').replace(/\s/g, '')
+
+  console.log('[contact] Creating transporter — user:', user, '| pass length:', pass.length)
+
+  if (!user || !pass) {
+    console.error('[contact] GMAIL_USER or GMAIL_APP_PASSWORD env var is missing')
+  }
+
+  return nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    auth: { user, pass },
+  })
+}
 
 export async function sendContactEmail(
   formData: FormData
@@ -20,12 +29,19 @@ export async function sendContactEmail(
   const company = formData.get('company') as string
   const message = formData.get('message') as string
 
+  console.log('[contact] Submission received — name:', name, '| email:', email, '| company:', company)
+
   if (!name || !email || !message) {
+    console.warn('[contact] Validation failed — missing required fields')
     return { success: false, error: 'Missing required fields' }
   }
 
+  const transporter = createTransporter()
+
   try {
-    await transporter.sendMail({
+    console.log('[contact] Attempting to send via Gmail SMTP…')
+
+    const info = await transporter.sendMail({
       from: `"4hourlabs Contact" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER,
       replyTo: email,
@@ -45,9 +61,14 @@ export async function sendContactEmail(
         </div>
       `,
     })
+
+    console.log('[contact] Email sent successfully — messageId:', info.messageId)
     return { success: true }
-  } catch (err) {
-    console.error('Gmail error:', err)
-    return { success: false, error: 'Failed to send email' }
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err)
+    const code = (err as Record<string, unknown>).code
+    const response = (err as Record<string, unknown>).response
+    console.error('[contact] Gmail SMTP error — code:', code, '| message:', message, '| response:', response)
+    return { success: false, error: `SMTP error: ${message}` }
   }
 }
