@@ -4,14 +4,15 @@ import nodemailer from 'nodemailer'
 
 function createTransporter() {
   const user = process.env.GMAIL_USER
-  // Strip spaces — Gmail app passwords are 16 chars, spaces are display-only
   const pass = (process.env.GMAIL_APP_PASSWORD ?? '').replace(/\s/g, '')
 
-  console.log('[contact] Creating transporter — user:', user, '| pass length:', pass.length)
-
-  if (!user || !pass) {
-    console.error('[contact] GMAIL_USER or GMAIL_APP_PASSWORD env var is missing')
-  }
+  // Masked log — shows enough to confirm vars are loaded without exposing secrets
+  console.log(
+    '[contact] Env check — GMAIL_USER:',
+    user ? `${user.slice(0, 4)}…${user.slice(-8)}` : 'MISSING',
+    '| GMAIL_APP_PASSWORD length:',
+    pass.length > 0 ? pass.length : 'MISSING'
+  )
 
   return nodemailer.createTransport({
     host: 'smtp.gmail.com',

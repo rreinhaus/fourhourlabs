@@ -11,7 +11,6 @@ interface Props {
 export function ContactForm({ dict }: Props) {
   const formRef = useRef<HTMLFormElement>(null)
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [errorDetail, setErrorDetail] = useState<string | undefined>()
   const [isPending, startTransition] = useTransition()
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -24,11 +23,9 @@ export function ContactForm({ dict }: Props) {
       console.log('[ContactForm] Server action result:', result)
       if (result.success) {
         setStatus('success')
-        setErrorDetail(undefined)
         formRef.current?.reset()
       } else {
         console.error('[ContactForm] Submission failed:', result.error)
-        setErrorDetail(result.error)
         setStatus('error')
       }
     })
@@ -78,12 +75,7 @@ export function ContactForm({ dict }: Props) {
           <p className="font-mono text-sm text-blue-900">{dict.success}</p>
         )}
         {status === 'error' && (
-          <div>
-            <p className="font-mono text-sm text-red-600">{dict.error}</p>
-            {errorDetail && (
-              <p className="font-mono text-xs text-red-400 mt-1">{errorDetail}</p>
-            )}
-          </div>
+          <p className="font-mono text-sm text-red-600">{dict.error}</p>
         )}
       </form>
     </div>
