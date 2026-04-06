@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       template: '%s | 4hourlabs',
     },
     description: dict.meta.home_description,
-    metadataBase: new URL('https://4hourlabs.com'),
+    metadataBase: new URL('https://fourhourlabs.com'),
     icons: {
       icon: '/favicon.png',
       shortcut: '/favicon.png',
